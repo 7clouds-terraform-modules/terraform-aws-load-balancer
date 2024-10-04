@@ -108,26 +108,22 @@ variable "LISTENER_DEFAULT_ACTION_TYPE" {
 
 variable "SECURITY_GROUP_INGRESS_BLOCK" {
    description = "One or more ingress blocks for the security group (multiples allowed)"
-   type = list(object({ 
-      ingress = list(object({
-                        SECURITY_GROUP_INGRESS_FROM_PORT  = string,
-                        SECURITY_GROUP_INGRESS_TO_PORT = string,
-                        SECURITY_GROUP_INGRESS_RULES_PROTOCOL = string,
-                        SECURITY_GROUP_INGRESS_CIDR_BLOCK = list(string)
+   type = list(object({
+                      SECURITY_GROUP_INGRESS_FROM_PORT  = string,
+                      SECURITY_GROUP_INGRESS_TO_PORT = string,
+                      SECURITY_GROUP_INGRESS_RULES_PROTOCOL = string,
+                      SECURITY_GROUP_INGRESS_CIDR_BLOCK = list(string)
                   }))
-  }))
 }
 
 variable "SECURITY_GROUP_EGRESS_BLOCK" {
    description = "One or more egress blocks for the security group (multiples allowed)"
-   type = list(object({ 
-      egress = list(object({
-                        SECURITY_GROUP_EGRESS_FROM_PORT  = string,
-                        SECURITY_GROUP_EGRESS_TO_PORT = string,
-                        SECURITY_GROUP_EGRESS_RULES_PROTOCOL = string,
-                        SECURITY_GROUP_EGRESS_CIDR_BLOCK = list(string)
+   type = list(object({
+                      SECURITY_GROUP_EGRESS_FROM_PORT  = string,
+                      SECURITY_GROUP_EGRESS_TO_PORT = string,
+                      SECURITY_GROUP_EGRESS_RULES_PROTOCOL = string,
+                      SECURITY_GROUP_EGRESS_CIDR_BLOCK = list(string)
                   }))
-  }))
 }
 
 
