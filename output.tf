@@ -186,3 +186,8 @@ output "LOAD_BALANCER_TARGET_GROUP_ID" {
   value       = aws_lb_target_group.lb_tg.id
   description = "ID for the Load Balancer Target Group"
 }
+
+output "LOAD_BALANCER_SECURITY_GROUP_ID" {
+  value       = aws_security_group.lb_sg.id
+  description = "ID for the Load Balancer Security Group"
+}
