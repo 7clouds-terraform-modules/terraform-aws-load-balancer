@@ -181,3 +181,8 @@ output "LOAD_BALANCER_DNS_NAME" {
   value       = aws_lb.lb.dns_name
   description = "DNS name for the Load Balancer"
 }
+
+output "LOAD_BALANCER_TARGET_GROUP_ID" {
+  value       = aws_lb_target_group.lb_tg.id
+  description = "ID for the Load Balancer Target Group"
+}
